@@ -91,7 +91,7 @@ class Net::HTTP::DigestAuth
     params['algorithm'] = $1 || 'MD5'
 
     if params['algorithm'] =~ /(.*?)(-sess)?$/
-      algorithm = case $1
+      algorithm = case $1.gsub('"', '')
                   when 'MD5'    then Digest::MD5
                   when 'SHA1'   then Digest::SHA1
                   when 'SHA2'   then Digest::SHA2
