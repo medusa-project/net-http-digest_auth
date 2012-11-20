@@ -1,10 +1,9 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'version'
 
 Gem::Specification.new do |gem|
   gem.name          = "net-http-digest_auth"
-  gem.version       = Net::HTTP::DigestAuth::VERSION
+  gem.version       = "1.2.1"
   gem.authors       = ["Eric Hodel", "Howard Ding"]
   gem.email         = ["hding2@illinois.edu"]
   gem.description   = %q{Small mod of Eric Hodels original code}

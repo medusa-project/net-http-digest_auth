@@ -38,7 +38,7 @@ require 'securerandom'
 #   res = h.request req
 
 class Net::HTTP::DigestAuth
-
+  VERSION = '1.2.1'
   include MonitorMixin
 
   ##
