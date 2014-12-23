@@ -15,6 +15,10 @@ Hoe.spec 'net-http-digest_auth' do
   rdoc_locations <<
     'rubyforge.org:/var/www/gforge-projects/seattlerb/net-http-digest_auth/'
 
+  license 'MIT'
+
+  dependency 'minitest', '~> 5.0', :development
+
   self.spec_extras[:required_ruby_version] = '>= 1.8.7'
 end
 

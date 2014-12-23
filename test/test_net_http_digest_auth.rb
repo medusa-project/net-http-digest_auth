@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'net/http/digest_auth'
 
-class TestNetHttpDigestAuth < MiniTest::Unit::TestCase
+class TestNetHttpDigestAuth < Minitest::Test
 
   def setup
     @uri = URI.parse "http://www.example.com/"
@@ -104,6 +104,12 @@ class TestNetHttpDigestAuth < MiniTest::Unit::TestCase
     end
     
     assert_equal 'unknown algorithm "bogus"', e.message
+  end
+
+  def test_auth_header_quoted_algorithm
+    @header << 'algorithm="MD5"'
+
+    assert_equal expected, @da.auth_header(@uri, @header, 'GET')
   end
 
   def test_make_cnonce

@@ -48,7 +48,7 @@ class Net::HTTP::DigestAuth
   ##
   # Version of Net::HTTP::DigestAuth you are using
 
-  VERSION = '1.3'
+  VERSION = '1.4'
 
   ##
   # Creates a new DigestAuth header creator.
@@ -85,7 +85,7 @@ class Net::HTTP::DigestAuth
     params = {}
     challenge.gsub(/(\w+)="(.*?)"/) { params[$1] = $2 }
 
-    challenge =~ /algorithm=(.*?)([, ]|$)/
+    challenge =~ /algorithm="?(.*?)"?([, ]|$)/
 
     params['algorithm'] = $1 || 'MD5'
 
