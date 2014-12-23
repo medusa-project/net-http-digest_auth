@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |gem|
   gem.name          = "net-http-digest_auth"
-  gem.version       = "1.3.0"
+  gem.version       = "1.3.0.1"
   gem.authors       = ["Eric Hodel", "Howard Ding"]
   gem.email         = ["hding2@illinois.edu"]
   gem.description   = %q{Small mod of Eric Hodels original code}
